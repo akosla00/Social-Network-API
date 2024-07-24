@@ -1,4 +1,4 @@
-const { Thought } = require('../models');
+const { Thought, User } = require('../models');
 
 module.exports = {
     //get all thought
@@ -40,6 +40,7 @@ module.exports = {
             }
             res.json(thought);
         } catch (err) {
+            console.log(err);
             res.status(500).json(err);
         }
     },
